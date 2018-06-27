@@ -1,19 +1,5 @@
 <meta name="viewport" content="width=500, initial-scale=1"> <!--This line of code is for mobile responsive -->
 
-<div class="BorderMargin">
-  <image src = '/images/LED.png' alt="LED" style="width:180px;height:180px;">
-
-  <form action="/led/on" method="post">
-    <button type="submit" class="button">LED On </button>
-      <button type="submit" formmethod="post" formaction="/led/off" class="button button3">LED Off</button>
-  </form>
-
-  <a>Led Status: <%=status %></a>
-</div>
-
- <image src = '/images/nodejs-logo.png' alt="NodeJS" style="width:180px;height:180px;  float: left;">
-  <image src = '/images/rpi-logo.png' alt="NodeJS" style="width:140px;height:180px;  float: left;">
-
 <!-- The below code is only for look and styling -->
 <style>
 .button {
@@ -41,6 +27,68 @@
    padding: 10px;
    max-width: 300px;
    height: 300px;
-   border: 1px solid black;
+   border: 1px solid white;
 }   
 </style>
+
+<table>
+  <tr>
+    <td> <!--For LED 1 -->
+      <div class="BorderMargin">
+         <image src = '/images/LED.png' alt="LED" style="width:60px;height:60px;">
+         <form action="/led1/on" method="post">
+          <button type="submit" class="button">LED On </button>
+          <button type="submit" formmethod="post" formaction="/led1/off" class="button button3">LED Off</button>
+         </form>
+         #<a>Led Status: <%=status %></a>
+      </div>
+    </td>
+    <td> <!--For LED 2 -->
+      <div class="BorderMargin">
+         <image src = '/images/LED.png' alt="LED" style="width:60 px;height:60x;">
+         <form action="/led1/on" method="post">
+          <button type="submit" class="button">LED On </button>
+          <button type="submit" formmethod="post" formaction="/led1/off" class="button button3">LED Off</button>
+         </form>
+         #<a>Led Status: <%=status %></a>
+      </div>
+    </td>
+   </tr>
+   <tr>
+    <td> <!--For LED 3 -->
+      <div class="BorderMargin">
+         <image src = '/images/LED.png' alt="LED" style="width:60px;height:60px;">
+         <form action="/led1/on" method="post">
+          <button type="submit" class="button">LED On </button>
+          <button type="submit" formmethod="post" formaction="/led1/off" class="button button3">LED Off</button>
+         </form>
+         #<a>Led Status: <%=status %></a>
+      </div>
+    </td>
+    <td> <!--For LED 4 -->
+      <div class="BorderMargin">
+         <image src = '/images/LED.png' alt="LED" style="width:60px;height:60px;">
+         <form action="/led1/on" method="post">
+          <button type="submit" class="button">LED On </button>
+          <button type="submit" formmethod="post" formaction="/led1/off" class="button button3">LED Off</button>
+         </form>
+         #<a>Led Status: <%=status %></a>
+      </div>
+    </td>
+   </tr>
+   <tr>
+    <td> <!--For LED 5 -->
+      <div class="BorderMargin">
+         <image src = '/images/LED.png' alt="LED" style="width:60px;height:60px;">
+         <form action="/led1/on" method="post">
+          <button type="submit" class="button">LED On </button>
+          <button type="submit" formmethod="post" formaction="/led1/off" class="button button3">LED Off</button>
+         </form>
+         #<a>Led Status: <%=status %></a>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<image src = '/images/nodejs-logo.png' alt="NodeJS" style="width:180px;height:180px;  float: left;">
+<image src = '/images/rpi-logo.png' alt="NodeJS" style="width:140px;height:180px;  float: left;">
