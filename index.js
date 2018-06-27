@@ -22,8 +22,8 @@ app.get('/', function(req, res){
  	res.render('index',{status:"Press Button To change Status of Led !!"});
 });
 
-	# ----- LEDs ON ------
-#For led 1
+	<!-- ----- LEDs ON ------ -->
+<!-- For LED 1 -->
 app.post('/led1/on', function(req, res){
 gpio1.write(7, true, function(err) {
         if (err) throw err;
@@ -33,7 +33,7 @@ gpio1.write(7, true, function(err) {
     });
 
 });
-#For led 2
+<!-- For LED 2 -->
 app.post('/led2/on', function(req, res){
 gpio2.write(11, true, function(err) {
         if (err) throw err;
@@ -43,7 +43,7 @@ gpio2.write(11, true, function(err) {
     });
 
 });
-#For led 3
+<!-- For LED 3 -->
 app.post('/led3/on', function(req, res){
 gpio3.write(13, true, function(err) {
         if (err) throw err;
@@ -53,7 +53,7 @@ gpio3.write(13, true, function(err) {
     });
 
 });
-#For led 4
+<!-- For LED 4 -->
 app.post('/led4/on', function(req, res){
 gpio3.write(15, true, function(err) {
         if (err) throw err;
@@ -63,7 +63,7 @@ gpio3.write(15, true, function(err) {
     });
 
 });
-#For led 5
+<!-- For LED 5 -->
 app.post('/led5/on', function(req, res){
 gpio3.write(16, true, function(err) {
         if (err) throw err;
@@ -74,8 +74,8 @@ gpio3.write(16, true, function(err) {
 
 });
 
-	# ----- LED off -----
-#For led 1
+	<!-- LED off -->
+<!-- For LED 1 -->
 app.post('/led1/off', function(req, res){
 gpio.write(7, false, function(err) {
         if (err) throw err;
@@ -85,7 +85,7 @@ gpio.write(7, false, function(err) {
     });
 
 });
-#For led 2
+<!-- For LED 2 -->
 app.post('/led2/off', function(req, res){
 gpio.write(11, false, function(err) {
         if (err) throw err;
@@ -95,7 +95,7 @@ gpio.write(11, false, function(err) {
     });
 
 });
-#For led 3
+<!-- For LED 3 -->
 app.post('/led3/off', function(req, res){
 gpio.write(13, false, function(err) {
         if (err) throw err;
@@ -105,7 +105,7 @@ gpio.write(13, false, function(err) {
     });
 
 });
-#For led 4
+<!-- For LED 4 -->
 app.post('/led4/off', function(req, res){
 gpio.write(15, false, function(err) {
         if (err) throw err;
@@ -115,7 +115,7 @@ gpio.write(15, false, function(err) {
     });
 
 });
-#For led 5
+<!-- For LED 5 -->
 app.post('/led5/off', function(req, res){
 gpio.write(16, false, function(err) {
         if (err) throw err;
