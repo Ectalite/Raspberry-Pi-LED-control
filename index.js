@@ -29,37 +29,99 @@ gpio1.write(7, true, function(err) {
         if (err) throw err;
         console.log('Written True to pin');
 	console.log(path.join(__dirname, 'public'));
-	return res.render('index', {status: "Cool!!Led is On"});
+	return res.render('index', {status: "Cool!!Led 1 is On"});
     });
 
 });
 #For led 2
 app.post('/led2/on', function(req, res){
-gpio2.write(7, true, function(err) {
+gpio2.write(11, true, function(err) {
         if (err) throw err;
         console.log('Written True to pin');
 	console.log(path.join(__dirname, 'public'));
-	return res.render('index', {status: "Cool!!Led is On"});
+	return res.render('index', {status: "Cool!!Led 2 is On"});
     });
 
 });
 #For led 3
 app.post('/led3/on', function(req, res){
-gpio3.write(7, true, function(err) {
+gpio3.write(13, true, function(err) {
         if (err) throw err;
         console.log('Written True to pin');
 	console.log(path.join(__dirname, 'public'));
-	return res.render('index', {status: "Cool!!Led is On"});
+	return res.render('index', {status: "Cool!!Led 3 is On"});
+    });
+
+});
+#For led 4
+app.post('/led4/on', function(req, res){
+gpio3.write(15, true, function(err) {
+        if (err) throw err;
+        console.log('Written True to pin');
+	console.log(path.join(__dirname, 'public'));
+	return res.render('index', {status: "Cool!!Led 4 is On"});
+    });
+
+});
+#For led 5
+app.post('/led5/on', function(req, res){
+gpio3.write(16, true, function(err) {
+        if (err) throw err;
+        console.log('Written True to pin');
+	console.log(path.join(__dirname, 'public'));
+	return res.render('index', {status: "Cool!!Led 5 is On"});
     });
 
 });
 
-app.post('/led/off', function(req, res){
+	# ----- LED off -----
+#For led 1
+app.post('/led1/off', function(req, res){
 gpio.write(7, false, function(err) {
         if (err) throw err;
         console.log('Written False to pin');
 	console.log(path.join(__dirname, 'public'));
-	return res.render('index',{status: "Ohh!! Led is Off"});
+	return res.render('index',{status: "Ohh!! Led 1 is Off"});
+    });
+
+});
+#For led 2
+app.post('/led2/off', function(req, res){
+gpio.write(11, false, function(err) {
+        if (err) throw err;
+        console.log('Written False to pin');
+	console.log(path.join(__dirname, 'public'));
+	return res.render('index',{status: "Ohh!! Led 2 is Off"});
+    });
+
+});
+#For led 3
+app.post('/led3/off', function(req, res){
+gpio.write(13, false, function(err) {
+        if (err) throw err;
+        console.log('Written False to pin');
+	console.log(path.join(__dirname, 'public'));
+	return res.render('index',{status: "Ohh!! Led 3 is Off"});
+    });
+
+});
+#For led 4
+app.post('/led4/off', function(req, res){
+gpio.write(15, false, function(err) {
+        if (err) throw err;
+        console.log('Written False to pin');
+	console.log(path.join(__dirname, 'public'));
+	return res.render('index',{status: "Ohh!! Led 4 is Off"});
+    });
+
+});
+#For led 5
+app.post('/led5/off', function(req, res){
+gpio.write(16, false, function(err) {
+        if (err) throw err;
+        console.log('Written False to pin');
+	console.log(path.join(__dirname, 'public'));
+	return res.render('index',{status: "Ohh!! Led 5 is Off"});
     });
 
 });
