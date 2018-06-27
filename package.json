@@ -1,14 +1,13 @@
 { 
-  /*"name": "simple-rpi-local-server-led-control",
-  "version": "1.0.0",
-  "description": "SImple web server that runs html page which can control led connected to rpi",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "rpi"
-  ],    Doesn't exist anymore*/
+  "_comment": "  /*"name": "simple-rpi-local-server-led-control",
+    "version": "1.0.0",
+    "description": "SImple web server that runs html page which can control led connected to rpi",
+    "main": "index.js",
+    "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1 },
+    "keywords": [
+      "rpi"
+    ],    Doesn't exist anymore*/ ",
   "author": "satya sankar sahoo (www.myelectronicslab.com), modified by Ectalite",
   "license": "ISC",
   "dependencies": {
