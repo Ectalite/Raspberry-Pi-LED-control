@@ -3,7 +3,7 @@ var app = express();
 var path = require('path');
 var gpio = require('rpi-gpio');
 
-gpio1.setup(7, gpio.DIR_OUT);  #See https://lc.cx/m6hz
+gpio1.setup(7, gpio.DIR_OUT);  <!-- See https://lc.cx/m6hz -->
 gpio2.setup(11, gpio.DIR_OUT);
 gpio3.setup(13, gpio.DIR_OUT);
 gpio4.setup(15, gpio.DIR_OUT);
