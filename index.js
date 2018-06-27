@@ -1,7 +1,12 @@
-var express = require('express'); 
-var app = express();
-var path = require('path');
-var gpio = require('rpi-gpio');
+var express = require('express')
+var app = express()
+var path = require('path')
+var gpio = require('rpi-gpio')
+var gpio1 = gpio.promise;
+var gpio2 = gpio.promise;
+var gpio3 = gpio.promise;
+var gpio4 = gpio.promise;
+var gpio5 = gpio.promise;
 
 gpio1.setup(7, gpio.DIR_OUT);  <!-- See https://lc.cx/m6hz -->
 gpio2.setup(11, gpio.DIR_OUT);
