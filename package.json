@@ -7,5 +7,9 @@
     "rpi-gpio": "^0.8.1",
     "ms": "^2.1.1",
     "rpi-gpio": "^1.0.0"
+    "repository": {
+      "type": "git",
+      "url": "git://github.com/ectalite/Raspberry-Pi-LED-control.git"
+    }
   }
 }
