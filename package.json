@@ -1,5 +1,5 @@
-{
-  "name": "simple-rpi-local-server-led-control",
+{ 
+  /*"name": "simple-rpi-local-server-led-control",
   "version": "1.0.0",
   "description": "SImple web server that runs html page which can control led connected to rpi",
   "main": "index.js",
@@ -8,13 +8,14 @@
   },
   "keywords": [
     "rpi"
-  ],
-  "author": "satya sankar sahoo (www.myelectronicslab.com)",
+  ],    Doesn't exist anymore*/
+  "author": "satya sankar sahoo (www.myelectronicslab.com), modified by Ectalite",
   "license": "ISC",
   "dependencies": {
     "ejs": "^2.5.6",
     "express": "^4.15.3",
     "rpi-gpio": "^0.8.1",
     "ms": "^2.1.1"
+    "rpi-gpio": "^1.0.0"
   }
 }
