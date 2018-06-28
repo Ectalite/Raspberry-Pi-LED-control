@@ -16,6 +16,7 @@ console.log(path.join(__dirname, 'public'));
 
 app.get('/', function(req, res){ 
  	res.render('index',{status:"Press Button To change Status of Led !!"});
+	res.send({statusled1:"Press Button To change Status of Led !!"},{statusled2:"Press Button To change Status of Led !!"},{statusled3:"Press Button To change Status of Led !!"},{statusled4:"Press Button To change Status of Led !!"},{statusled5:"Press Button To change Status of Led !!"})
 });
 
 	<!-- ----- LEDs ON ------ -->
