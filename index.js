@@ -12,12 +12,10 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-console.log(path.join(__dirname, 'public')); 
+<!-- console.log(path.join(__dirname, 'public')); -->
 
 app.get('/', function(req, res){ 
- 	res.render('index',{status:"Press Button To change Status of Led !!"},{statusled1:"Press Button To change Status of Led !!"},{statusled2:"Press Button To change Status of Led !!"},{statusled3:"Press Button To change Status of Led !!"},{statusled4:"Press Button To change Status of Led !!"},{statusled5:"Press Button To change Status of Led !!"});
-	
-});
+ 	res.render('index',{status:"Press Button To change Status of Led !!", statusled1:"Re",statusled2:"Re",statusled3:"Re",statusled4:"Re",statusled5:"Re"});
 
 	<!-- ----- LEDs ON ------ -->
 <!-- For LED 1 -->
