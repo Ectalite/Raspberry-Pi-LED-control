@@ -6,6 +6,6 @@
    , "url" : "https://github.com/ectalite/Raspberry-Pi-LED-control.git"
   },
   "dependencies": {
-    "onoff": "^3.1.0",
+    "onoff": "^3.1.0"
   }
 }
