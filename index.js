@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req, res){ 
  	res.render('index',{status:"Press Button To change Status of Led !!", statusled1:"Re",statusled2:"Re",statusled3:"Re",statusled4:"Re",statusled5:"Re"});
-)};
+	});
 	
 	<!-- ----- LEDs ON ------ -->
 <!-- For LED 1 -->
