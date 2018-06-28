@@ -1,6 +1,7 @@
 { 
   "author": "satya sankar sahoo (www.myelectronicslab.com), modified by Ectalite",
   "license": "ISC",
+  "description": "SImple web server that runs html page which can control led connected to rpi",
   "repository" :
    { "type" : "git"
    , "url" : "https://github.com/ectalite/Raspberry-Pi-LED-control.git"
