@@ -24,6 +24,7 @@ app.get('/', function(req, res){
 <!-- For LED 1 -->
 app.post('/led1/on', function(req, res){
 	LED.writeSync(1); //set pin state to 1 (turn LED on)
+	res.render('index',{statusled1:"Led 1 en fonction"});
 });
 <!-- For LED 2 -->
 app.post('/led2/on', function(req, res){
