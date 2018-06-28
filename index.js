@@ -3,18 +3,10 @@ var app = express()
 var path = require('path')
 var Gpio = require('onoff').Gpio; //include onoff to interact with the GPIO
 var LED = new Gpio(4, 'out');
-var LED2 = new Gpio(17, 'out');
+var LED2 = new Gpio(17, 'out'); 	<!-- See https://lc.cx/m6hz -->
 var LED3 = new Gpio(27, 'out');
 var LED4 = new Gpio(22, 'out');
 var LED5 = new Gpio(23, 'out');
-
-
-gpio1.setup(7, gpio.DIR_OUT);  <!-- See https://lc.cx/m6hz -->
-gpio2.setup(11, gpio.DIR_OUT);
-gpio3.setup(13, gpio.DIR_OUT);
-gpio4.setup(15, gpio.DIR_OUT);
-gpio5.setup(16, gpio.DIR_OUT);
-
 
 
 
