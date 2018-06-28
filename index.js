@@ -7,11 +7,6 @@ var LED2 = new Gpio(17, 'out'); 	<!-- See https://lc.cx/m6hz -->
 var LED3 = new Gpio(27, 'out');
 var LED4 = new Gpio(22, 'out');
 var LED5 = new Gpio(23, 'out');
-var statusled1 = "Led 1 éteinte";
-var statusled2 = "Led 2 éteinte";
-var statusled3 = "Led 3 éteinte";
-var statusled4 = "Led 4 éteinte";
-var statusled5 = "Led 5 éteinte";
 
 app.set('view engine', 'ejs');
 
