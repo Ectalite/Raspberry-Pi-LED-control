@@ -27,12 +27,12 @@ app.post('/led1/on', function(req, res){
 <!-- For LED 2 -->
 app.post('/led2/on', function(req, res){
 	LED2.writeSync(1); //set pin state to 1 (turn LED on)
-	res.render('index',{statusled1:"Led 2 en fonction"});
+	res.render('index',{statusled1:"Led 1 en fonction"});
 });
 <!-- For LED 3 -->
 app.post('/led3/on', function(req, res){
 	LED3.writeSync(1); //set pin state to 1 (turn LED on)
-	res.render('index',{statusled1:"Led 3 en fonction"});
+	res.render('index',{statusled1:"Led 1 en fonction"});
 });
 <!-- For LED 4 -->
 app.post('/led4/on', function(req, res){
