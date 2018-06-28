@@ -1,12 +1,13 @@
 var express = require('express')
 var app = express()
 var path = require('path')
-var gpio = require('rpi-gpio')
-var gpio1 = gpio.promise;
-var gpio2 = gpio.promise;
-var gpio3 = gpio.promise;
-var gpio4 = gpio.promise;
-var gpio5 = gpio.promise;
+var Gpio = require('onoff').Gpio; //include onoff to interact with the GPIO
+var LED = new Gpio(4, 'out');
+var LED2 = new Gpio(17, 'out');
+var LED3 = new Gpio(27, 'out');
+var LED4 = new Gpio(22, 'out');
+var LED5 = new Gpio(23, 'out');
+
 
 gpio1.setup(7, gpio.DIR_OUT);  <!-- See https://lc.cx/m6hz -->
 gpio2.setup(11, gpio.DIR_OUT);
@@ -21,113 +22,57 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-console.log(path.join(__dirname, 'public'));
+<!-- console.log(path.join(__dirname, 'public')); -->
 
 app.get('/', function(req, res){ 
- 	res.render('index',{status:"Press Button To change Status of Led !!"});
+ 	<!-- res.render('index',{status:"Press Button To change Status of Led !!"}); -->
 });
 
 	<!-- ----- LEDs ON ------ -->
 <!-- For LED 1 -->
 app.post('/led1/on', function(req, res){
-gpio1.write(7, true, function(err) {
-        if (err) throw err;
-        console.log('Written True to pin');
-	console.log(path.join(__dirname, 'public'));
-	return res.render('index', {status: "Cool!!Led 1 is On"});
-    });
-
+	LED.writeSync(1); //set pin state to 1 (turn LED on)
 });
 <!-- For LED 2 -->
 app.post('/led2/on', function(req, res){
-gpio2.write(11, true, function(err) {
-        if (err) throw err;
-        console.log('Written True to pin');
-	console.log(path.join(__dirname, 'public'));
-	return res.render('index', {status: "Cool!!Led 2 is On"});
-    });
-
+	LED2.writeSync(1); //set pin state to 1 (turn LED on)
 });
 <!-- For LED 3 -->
 app.post('/led3/on', function(req, res){
-gpio3.write(13, true, function(err) {
-        if (err) throw err;
-        console.log('Written True to pin');
-	console.log(path.join(__dirname, 'public'));
-	return res.render('index', {status: "Cool!!Led 3 is On"});
-    });
-
+	LED3.writeSync(1); //set pin state to 1 (turn LED on)
 });
 <!-- For LED 4 -->
 app.post('/led4/on', function(req, res){
-gpio3.write(15, true, function(err) {
-        if (err) throw err;
-        console.log('Written True to pin');
-	console.log(path.join(__dirname, 'public'));
-	return res.render('index', {status: "Cool!!Led 4 is On"});
-    });
-
+	LED4.writeSync(1); //set pin state to 1 (turn LED on)
 });
 <!-- For LED 5 -->
 app.post('/led5/on', function(req, res){
-gpio3.write(16, true, function(err) {
-        if (err) throw err;
-        console.log('Written True to pin');
-	console.log(path.join(__dirname, 'public'));
-	return res.render('index', {status: "Cool!!Led 5 is On"});
-    });
-
+	LED5.writeSync(1); //set pin state to 1 (turn LED on)
 });
 
 	<!-- LED off -->
 <!-- For LED 1 -->
 app.post('/led1/off', function(req, res){
-gpio.write(7, false, function(err) {
-        if (err) throw err;
-        console.log('Written False to pin');
-	console.log(path.join(__dirname, 'public'));
-	return res.render('index',{status: "Ohh!! Led 1 is Off"});
-    });
+	LED.writeSync(0);
 
 });
 <!-- For LED 2 -->
 app.post('/led2/off', function(req, res){
-gpio.write(11, false, function(err) {
-        if (err) throw err;
-        console.log('Written False to pin');
-	console.log(path.join(__dirname, 'public'));
-	return res.render('index',{status: "Ohh!! Led 2 is Off"});
-    });
+	LED2.writeSync(0);
 
 });
 <!-- For LED 3 -->
 app.post('/led3/off', function(req, res){
-gpio.write(13, false, function(err) {
-        if (err) throw err;
-        console.log('Written False to pin');
-	console.log(path.join(__dirname, 'public'));
-	return res.render('index',{status: "Ohh!! Led 3 is Off"});
-    });
+	LED3.writeSync(0);
 
 });
 <!-- For LED 4 -->
 app.post('/led4/off', function(req, res){
-gpio.write(15, false, function(err) {
-        if (err) throw err;
-        console.log('Written False to pin');
-	console.log(path.join(__dirname, 'public'));
-	return res.render('index',{status: "Ohh!! Led 4 is Off"});
-    });
-
+	LED4.writeSync(0);
 });
 <!-- For LED 5 -->
 app.post('/led5/off', function(req, res){
-gpio.write(16, false, function(err) {
-        if (err) throw err;
-        console.log('Written False to pin');
-	console.log(path.join(__dirname, 'public'));
-	return res.render('index',{status: "Ohh!! Led 5 is Off"});
-    });
+	LED5.writeSync(0);
 
 });
 
